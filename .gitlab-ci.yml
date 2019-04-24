@@ -1,0 +1,28 @@
+stages:
+  - build
+  - tests
+
+build:
+  stage: build 
+  script:
+    # - docker system prune -f
+    - cmd /c 'py -m pip install -r requirements.txt && py -m pip install -r test-requirements.txt'     
+  tags:
+    - words
+
+tests:
+  stage: tests  
+  script: 
+    - mkdir Settings
+    - echo "{""AppSid"":""$env:AppSid"",""AppKey"":""$env:AppKey"",""BaseUrl"":""$env:TestServerUrl"" }" > Settings/servercreds.json
+    - cmd /c "nosetests --with-xunit"
+  dependencies:
+    - build
+  artifacts:
+    paths:       
+      - 'nodesets.xml'   
+    reports: 
+      junit: 
+        - 'nodesets.xml'   
+  tags:
+    - words
