@@ -6,7 +6,7 @@ build:
   stage: build 
   script:
     # - docker system prune -f
-    - cmd /c 'py -m pip install -r requirements.txt && py -m pip install -r test-requirements.txt'     
+    - docker run --rm -v %cd%:/opt/project -w="/opt/project" python:2.7.15 /bin/bash python -m pip install -r requirements.txt && python -m pip install -r test-requirements.txt' 
   tags:
     - words
 
@@ -15,7 +15,7 @@ tests:
   script: 
     - mkdir Settings
     - echo "{""AppSid"":""$env:AppSid"",""AppKey"":""$env:AppKey"",""BaseUrl"":""$env:TestServerUrl"" }" > Settings/servercreds.json
-    - cmd /c "nosetests --with-xunit"
+    - docker run --rm -v %cd%:/opt/project -w="/opt/project" python:2.7.15 /bin/bash "nosetests --with-xunit"
   dependencies:
     - build
   artifacts:
