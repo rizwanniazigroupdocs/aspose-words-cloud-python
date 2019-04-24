@@ -6,7 +6,7 @@ build:
   stage: build 
   script:
     # - docker system prune -f
-    - docker run --rm -v %cd%:/opt/project -w="/opt/project" python:2.7.15 /bin/bash -c "python -m pip install -r requirements.txt && python -m pip install -r test-requirements.txt"' 
+    - docker run --rm -v %cd%:/opt/project -w="/opt/project" python:2.7.15 /bin/bash -c "python -m pip install -r requirements.txt && python -m pip install -r test-requirements.txt" 
   tags:
     - words
 
