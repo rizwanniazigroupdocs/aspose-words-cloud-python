@@ -13,9 +13,9 @@ build:
 tests:
   stage: tests  
   script: 
-    - mkdir Settings
+    - mkdir -p Settings
     - echo "{""AppSid"":""$env:AppSid"",""AppKey"":""$env:AppKey"",""BaseUrl"":""$env:TestServerUrl"" }" > Settings/servercreds.json
-    - docker run --rm -v %cd%:/opt/project -w="/opt/project" python:2.7.15 /bin/bash "nosetests --with-xunit"
+    - docker run --rm -v $PWD:/opt/project -w="/opt/project" python:2.7.15 bash -c "nosetests --with-xunit"
   dependencies:
     - build
   artifacts:
@@ -25,4 +25,4 @@ tests:
       junit: 
         - 'nodesets.xml'   
   tags:
-    - awcloud
+    - awcloud-linux
