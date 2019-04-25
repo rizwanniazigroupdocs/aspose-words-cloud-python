@@ -6,9 +6,9 @@ build:
   stage: build 
   script:
     # - docker system prune -f
-    - cmd /c "docker run --rm -v %cd%:/opt/project -w=/opt/project python:2.7.15 bash scripts/build.sh"
+    - docker run --rm -v $PWD:/opt/project -w=/opt/project python:2.7.15 bash scripts/build.sh
   tags:
-    - awcloud
+    - awcloud-linux
 
 tests:
   stage: tests  
