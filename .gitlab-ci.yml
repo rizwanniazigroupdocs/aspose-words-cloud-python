@@ -8,7 +8,7 @@ build:
     # - docker system prune -f
     - cmd /c "docker run --rm -v "%cd%:/opt/project" -w="/opt/project" python:2.7.15 /bin/bash -c "python -m pip install -r requirements.txt && python -m pip install -r test-requirements.txt""
   tags:
-    - awcloud-linux
+    - awcloud
 
 tests:
   stage: tests  
@@ -25,4 +25,4 @@ tests:
       junit: 
         - 'nodesets.xml'   
   tags:
-    - awcloud-linux
+    - awcloud
