@@ -15,7 +15,7 @@ tests:
   script: 
     - mkdir -p Settings
     - echo "{""AppSid"":""$env:AppSid"",""AppKey"":""$env:AppKey"",""BaseUrl"":""$env:TestServerUrl"" }" > Settings/servercreds.json
-    - docker run --rm -v $PWD:/opt/project -w=/opt/project python:2.7.15 bash "scripts/build.sh && nosetests --with-xunit"
+    - docker run --rm -v $PWD:/opt/project -w=/opt/project python:2.7.15 bash scripts/build.sh
   dependencies:
     - build
   artifacts:
