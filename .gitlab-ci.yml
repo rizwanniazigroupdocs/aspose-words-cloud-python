@@ -10,9 +10,9 @@ tests:
     - ls -l
   artifacts:
     paths:       
-      - 'nodesets.xml'   
+      - 'nosetests.xml'   
     reports: 
       junit: 
-        - 'nodesets.xml'   
+        - 'nosetests.xml'   
   tags:
     - awcloud-linux
