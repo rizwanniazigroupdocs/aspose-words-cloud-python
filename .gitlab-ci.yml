@@ -15,6 +15,5 @@ tests:
     reports: 
       junit: 
         - 'nosetests.xml'
-        - 'lintResults.xml'   
   tags:
     - awcloud-linux
