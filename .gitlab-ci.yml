@@ -10,9 +10,11 @@ tests:
     - ls -l
   artifacts:
     paths:       
-      - 'nosetests.xml'   
+      - 'nosetests.xml'  
+      - 'lintResults.xml' 
     reports: 
       junit: 
-        - 'nosetests.xml'   
+        - 'nosetests.xml'
+        - 'lintResults.xml'   
   tags:
     - awcloud-linux
