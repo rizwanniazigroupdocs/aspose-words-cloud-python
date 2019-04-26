@@ -5,10 +5,8 @@ tests:
   stage: build&test  
   script: 
     - mkdir -p Settings
-    - echo "{""AppSid"":""$env:AppSid"",""AppKey"":""$env:AppKey"",""BaseUrl"":""$env:TestServerUrl"" }" > Settings/servercreds.json
+    - echo "{""AppSid"":""$AppSid"",""AppKey"":""$AppKey"",""BaseUrl"":""$TestServerUrl"" }" > Settings/servercreds.json
     - docker run --rm -v $PWD:/opt/project -w=/opt/project python:2.7.15 bash scripts/build.sh
-    - ls Settings -l
-    - cat Settings/servercreds.json
   artifacts:
     paths:       
       - 'nodesets.xml'   
