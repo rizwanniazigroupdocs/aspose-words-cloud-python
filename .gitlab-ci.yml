@@ -2,7 +2,7 @@ stages:
   - build&test
 
 tests:
-  stage: tests  
+  stage: build&test  
   script: 
     - mkdir -p Settings
     - echo "{""AppSid"":""$env:AppSid"",""AppKey"":""$env:AppKey"",""BaseUrl"":""$env:TestServerUrl"" }" > Settings/servercreds.json
