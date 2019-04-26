@@ -1,1 +1,1 @@
-python -m pip install -r requirements.txt && python -m pip install -r test-requirements.txt && nosetests --with-xunit && pylint --output-format=pylint_junit.JUnitReporter asposewordscloud/ test/ > lintResults.xml
+python -m pip install -r requirements.txt && python -m pip install -r test-requirements.txt && nosetests --with-xunit && pylint asposewordscloud/ test/ > lintResults.xml
