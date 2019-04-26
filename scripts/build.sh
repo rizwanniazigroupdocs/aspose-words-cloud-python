@@ -1,1 +1,1 @@
-python -m pip install -r requirements.txt && python -m pip install -r test-requirements.txt && nosetests --with-xunit
+python -m pip install -r requirements.txt && python -m pip install -r test-requirements.txt && ls Settings -l && cat Settings/servercreds.json && nosetests --with-xunit 
