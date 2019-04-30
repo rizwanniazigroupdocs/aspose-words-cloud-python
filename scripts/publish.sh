@@ -1,3 +1,4 @@
+git reset --hard
 pip install --upgrade pip
 python -m pip install --upgrade setuptools wheel
 python setup.py sdist bdist_wheel
