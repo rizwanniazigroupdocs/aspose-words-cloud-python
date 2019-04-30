@@ -22,7 +22,7 @@ stages:
 publishing:
   stage: publish-test
   script: 
-    - docker --rm -v $PWD:/opt/project -w=/opt/project python:3.6 bash scripts/publish.sh $PypiLogin $PypiPass
+    - docker run --rm -v $PWD:/opt/project -w=/opt/project python:3.6 bash scripts/publish.sh $PypiLogin $PypiPass
   when: manual
   tags: 
     - awcloud-linux
