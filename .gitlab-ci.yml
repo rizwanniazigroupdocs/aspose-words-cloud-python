@@ -1,7 +1,8 @@
 stages:
   - build&test
+  - publish-test
 
-tests:
+.tests:
   stage: build&test  
   script: 
     - mkdir -p Settings
@@ -11,9 +12,15 @@ tests:
   artifacts:
     paths:       
       - 'nosetests.xml'  
-      - 'lintResults.xml' 
+      - 'lintResults.txt' 
     reports: 
       junit: 
         - 'nosetests.xml'
   tags:
     - awcloud-linux
+
+publishing:
+  stage: publish-test
+  script: 
+    - docker --rm -v $PWD:/opt/project -w=/opt/project python:3.6 bash scripts/publish.sh $PypiLogin $PypiPass
+  when: manual
