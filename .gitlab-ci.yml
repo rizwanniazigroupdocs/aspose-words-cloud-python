@@ -23,9 +23,10 @@ stages:
 merge-to-test:
   stage: merge-to-testPackage
   before_script:
-    - export ORIGIN="https://$GIT_CI_USER:$GIT_CI_PASS@git.auckland.dynabic.com/words-cloud/words-cloud-python.git -f"
-    - export SDK_VERSION='date +%y.%m'
+    # - $env:ORIGIN += 'https://{0}:{1}@git.auckland.dynabic.com/words-cloud/words-cloud-python.git' -f $env:GIT_CI_USER, $env:GIT_CI_PASS
+    - $env:SDK_VERSION += ((Get-Date).AddMonths(1)).tostring("yy.M")
   script: 
+    - 'git remote set-url origin $env:ORIGIN'
     - git checkout --merge testPackageNew
     - git reset --hard origin/testPackageNew
     - git merge --no-ff origin/CI
@@ -34,6 +35,6 @@ merge-to-test:
     - git push $ORIGIN
     # - docker run --rm -v $PWD:/opt/project -w=/opt/project python:3.6 bash scripts/publish.sh $PypiLogin $PypiPass
   tags: 
-    - awcloud-linux
+    - awcloud
 
   
