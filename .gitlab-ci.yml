@@ -23,7 +23,7 @@ stages:
 merge-to-test:
   stage: merge-to-testPackage
   before_script:
-    # - $env:ORIGIN += 'https://{0}:{1}@git.auckland.dynabic.com/words-cloud/words-cloud-python.git' -f $env:GIT_CI_USER, $env:GIT_CI_PASS
+    - $env:ORIGIN += 'https://{0}:{1}@git.auckland.dynabic.com/words-cloud/words-cloud-python.git' -f $env:GIT_CI_USER, $env:GIT_CI_PASS
     - $env:SDK_VERSION += ((Get-Date).AddMonths(1)).tostring("yy.M")
   script: 
     - 'git remote set-url origin $env:ORIGIN'
