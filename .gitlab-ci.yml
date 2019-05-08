@@ -24,7 +24,7 @@ merge-to-test:
   stage: merge-to-testPackage
   before_script:
     - export ORIGIN="https://$GIT_CI_USER:$GIT_CI_PASS@git.auckland.dynabic.com/words-cloud/words-cloud-python.git -f"
-    - export SDK_VERSION=date +%y.%m
+    - export SDK_VERSION='date +%y.%m'
   script: 
     - git checkout */CI 
     - git checkout --merge testPackageNew
