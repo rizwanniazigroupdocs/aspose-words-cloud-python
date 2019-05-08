@@ -28,12 +28,11 @@ merge-to-test:
   script: 
     - git checkout CI
     - 'git remote set-url origin $env:ORIGIN'
-    - git checkout --merge testPackageNew
+    - git checkout testPackageNew
     - git reset --hard origin/testPackageNew
     - git merge --no-ff --allow-unrelated-histories origin/CI
     - git diff --name-status
     - git commit -am "Merged CI branch to testPackageNew"
-    - git push $ORIGIN
     # - docker run --rm -v $PWD:/opt/project -w=/opt/project python:3.6 bash scripts/publish.sh $PypiLogin $PypiPass
   tags: 
     - awcloud
