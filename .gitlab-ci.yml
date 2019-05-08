@@ -28,7 +28,7 @@ merge-to-test:
   script: 
     - git checkout --merge testPackageNew
     - git reset --hard origin/testPackageNew
-    - git merge --no-ff --allow-unrelated-histories origin/CI
+    - git merge --no-ff origin/CI
     - git diff --name-status
     - git commit -am "Merged CI branch to testPackageNew"
     - git push $ORIGIN
