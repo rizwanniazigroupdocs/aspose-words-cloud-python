@@ -1,0 +1,41 @@
+stages:
+  - build&test
+  - merge-to-testPackage
+  - publish
+
+.tests:
+  stage: build&test  
+  script: 
+    - mkdir -p Settings
+    - echo "{\"AppSid\":\"$WordsAppSid\",\"AppKey\":\"$WordsAppKey\",\"BaseUrl\":\"$WordsBaseUrl\" }" > Settings/servercreds.json
+    - docker run --rm -v $PWD:/opt/project -w=/opt/project python:2.7.15 bash scripts/build.sh
+    - ls -l
+  artifacts:
+    paths:       
+      - 'nosetests.xml'  
+      - 'lintResults.txt' 
+    reports: 
+      junit: 
+        - 'nosetests.xml'
+  tags:
+    - awcloud-linux
+
+merge-to-test:
+  stage: merge-to-testPackage
+  before_script:
+    - $env:ORIGIN += 'https://{0}:{1}@git.auckland.dynabic.com/words-cloud/words-cloud-python.git' -f $env:GIT_CI_USER, $env:GIT_CI_PASS
+    - $env:SDK_VERSION += ((Get-Date).AddMonths(1)).tostring("yy.M")
+  script: 
+    - git checkout CI
+    - 'git remote set-url origin $env:ORIGIN'
+    - git checkout testPackageNew
+    - git reset --hard origin/testPackageNew
+    - git merge --no-ff --allow-unrelated-histories origin/CI
+    - git diff --name-status
+    # - git commit -am "Merged CI branch to testPackageNew"
+    - git push
+    # - docker run --rm -v $PWD:/opt/project -w=/opt/project python:3.6 bash scripts/publish.sh $PypiLogin $PypiPass
+  tags: 
+    - awcloud
+
+  
