@@ -1,7 +1,7 @@
 stages:
   - build&test
   - merge-to-testPackage
-  - publish
+  - publish-test
 
 .tests:
   stage: build&test  
@@ -37,5 +37,10 @@ merge-to-test:
     # - docker run --rm -v $PWD:/opt/project -w=/opt/project python:3.6 bash scripts/publish.sh $PypiLogin $PypiPass
   tags: 
     - awcloud
+
+publish-test:
+  stage: publish-test
+  - docker run --rm -v $PWD:/opt/project -w=/opt/project python:3.6 bash -c 'scripts/publish.sh $PypiLogin $PypiPass'
+
 
   
