@@ -35,6 +35,8 @@ merge-to-test:
     # - git commit -am "Merged CI branch to testPackageNew"
     - git push
     # - docker run --rm -v $PWD:/opt/project -w=/opt/project python:3.6 bash scripts/publish.sh $PypiLogin $PypiPass
+  only: 
+    - CI
   tags: 
     - awcloud
 
@@ -45,6 +47,8 @@ publish-test:
   artifacts:
     paths:       
       - '.pypirc'  
+  only:
+    - testPackageNew
   tags:
     - awcloud-linux
 
