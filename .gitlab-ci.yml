@@ -64,10 +64,11 @@ test-package:
   tags: 
     - awcloud-linux
   artifacts:
-    - nosetests.xml
-  reports:
-    junit:
+    paths:
       - nosetests.xml
+    reports:
+      junit:
+        - nosetests.xml
 
 
   
