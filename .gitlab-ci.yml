@@ -32,9 +32,7 @@ merge-to-test:
     - git reset --hard origin/testPackageNew
     - git merge --no-ff --allow-unrelated-histories origin/CI
     - git diff --name-status
-    # - git commit -am "Merged CI branch to testPackageNew"
     - git push
-    # - docker run --rm -v $PWD:/opt/project -w=/opt/project python:3.6 bash scripts/publish.sh $PypiLogin $PypiPass
   only: 
     - CI
   tags: 
@@ -49,8 +47,26 @@ publish-test:
       - '.pypirc'  
   only:
     - testPackageNew
+  when: manual
   tags:
+    - echo "{\"AppSid\":\"$WordsAppSid\",\"AppKey\":\"$WordsAppKey\",\"Base
     - awcloud-linux
+
+test-package:
+  stage: test-package
+  script: 
+    - python -m pip install --upgrade setuptools wheel
+    - pip install urllib3
+    - pip install --index-url https://test.pypi.org/simple/ asposewordscloud
+    - python -m pip install -r requirements.txt && python -m pip install -r test-requirements.txt
+    - echo "{\"AppSid\":\"$WordsAppSid\",\"AppKey\":\"$WordsAppKey\",\"BaseUrl\":\"$WordsBaseUrl\" }" > Settings/servercreds.json
+    - nosetests --with-xunit
+  tags: 
+    - awcloud-linux
+  artifacts:
+    - nosetests.xml
+  reports:
+    - nosetests.xml
 
 
   
