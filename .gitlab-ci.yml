@@ -60,7 +60,6 @@ publish-test:
   only:
     - testPackageNew
   tags:
-    - echo "{\"AppSid\":\"$WordsAppSid\",\"AppKey\":\"$WordsAppKey\",\"Base
     - awcloud-linux
   dependencies:
     - wait-for-publish
@@ -69,12 +68,7 @@ publish-test:
 test-package:
   stage: test-package
   script: 
-    - python -m pip install --upgrade setuptools wheel
-    - pip install urllib3
-    - pip install --index-url https://test.pypi.org/simple/ asposewordscloud
-    - python -m pip install -r requirements.txt && python -m pip install -r test-requirements.txt
-    - echo "{\"AppSid\":\"$WordsAppSid\",\"AppKey\":\"$WordsAppKey\",\"BaseUrl\":\"$WordsBaseUrl\" }" > Settings/servercreds.json
-    - nosetests --with-xunit
+    - docker run --rm -v $PWD:/opt/project -w=/opt/project python:3.6 bash scripts/test-package.sh $WordsAppSid $WordsAppKey $WordsBaseUrl
   tags: 
     - awcloud-linux
   artifacts:
@@ -83,6 +77,8 @@ test-package:
     reports:
       junit:
         - nosetests.xml
+  only:
+    - testPackageNew
   dependencies:
     - wait-for-publish
     - merge-to-testPackage
