@@ -5,7 +5,7 @@ stages:
   - publish-test
   - test-package
 
-.tests:
+tests:
   stage: build&test  
   script: 
     - mkdir -p Settings
@@ -19,6 +19,8 @@ stages:
     reports: 
       junit: 
         - 'nosetests.xml'
+  except:
+    - testPackageNew
   tags:
     - awcloud-linux
 
@@ -53,7 +55,7 @@ merge-to-testPackage:
 publish-test:
   stage: publish-test
   script:
-    - docker run --rm -v $PWD:/opt/project -w=/opt/project python:3.6 bash scripts/publish.sh $PypiLogin $PypiPass
+    - docker run --rm -v $PWD:/opt/project -w=/opt/project python:2.7.15 bash scripts/publish.sh $PypiLogin $PypiPass
   artifacts:
     paths:       
       - '.pypirc'  
