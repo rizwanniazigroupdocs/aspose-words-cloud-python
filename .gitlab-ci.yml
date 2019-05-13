@@ -25,6 +25,10 @@ stages:
 wait-for-publish:
   stage: wait-for-publish
   when: manual
+  script:
+    - echo 'Starting publishing process'
+  tags:
+    - awcloud-linux
 
 merge-to-test:
   stage: merge-to-testPackage
