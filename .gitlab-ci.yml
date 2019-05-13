@@ -63,7 +63,8 @@ publish-test:
     - echo "{\"AppSid\":\"$WordsAppSid\",\"AppKey\":\"$WordsAppKey\",\"Base
     - awcloud-linux
   dependencies:
-    - merge-to-test
+    - wait-for-publish
+    - merge-to-testPackage
 
 test-package:
   stage: test-package
@@ -83,6 +84,8 @@ test-package:
       junit:
         - nosetests.xml
   dependencies:
+    - wait-for-publish
+    - merge-to-testPackage
     - publish-test
 
 
