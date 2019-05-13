@@ -9,3 +9,4 @@ python setup.py sdist
 twine upload dist/* -r pypitest
 chmod 777 -R aspose_words_cloud.egg-info
 chmod 777 -R dist
+chmod 777 -R build
