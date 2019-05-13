@@ -1,5 +1,6 @@
 stages:
   - build&test
+  - wait-for-publish
   - merge-to-testPackage
   - publish-test
   - test-package
@@ -21,6 +22,10 @@ stages:
   tags:
     - awcloud-linux
 
+wait-for-publish:
+  stage: wait-for-publish
+  when: manual
+
 merge-to-test:
   stage: merge-to-testPackage
   before_script:
@@ -34,6 +39,8 @@ merge-to-test:
     - git merge --no-ff --allow-unrelated-histories origin/CI
     - git diff --name-status
     - git push
+  dependencies:
+    - wait-for-publish
   only: 
     - CI
   tags: 
@@ -48,10 +55,11 @@ publish-test:
       - '.pypirc'  
   only:
     - testPackageNew
-  when: manual
   tags:
     - echo "{\"AppSid\":\"$WordsAppSid\",\"AppKey\":\"$WordsAppKey\",\"Base
     - awcloud-linux
+  dependencies:
+    - merge-to-test
 
 test-package:
   stage: test-package
@@ -70,6 +78,8 @@ test-package:
     reports:
       junit:
         - nosetests.xml
+  dependencies:
+    - publish-test
 
 
   
