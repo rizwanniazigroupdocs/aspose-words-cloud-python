@@ -1,7 +1,9 @@
 stages:
   - build&test
+  - wait-for-publish
   - merge-to-testPackage
   - publish-test
+  - test-package
 
 .tests:
   stage: build&test  
@@ -20,6 +22,14 @@ stages:
   tags:
     - awcloud-linux
 
+wait-for-publish:
+  stage: wait-for-publish
+  when: manual
+  script:
+    - echo 'Starting publishing process'
+  tags:
+    - awcloud-linux
+
 merge-to-test:
   stage: merge-to-testPackage
   before_script:
@@ -32,9 +42,9 @@ merge-to-test:
     - git reset --hard origin/testPackageNew
     - git merge --no-ff --allow-unrelated-histories origin/CI
     - git diff --name-status
-    # - git commit -am "Merged CI branch to testPackageNew"
     - git push
-    # - docker run --rm -v $PWD:/opt/project -w=/opt/project python:3.6 bash scripts/publish.sh $PypiLogin $PypiPass
+  dependencies:
+    - wait-for-publish
   only: 
     - CI
   tags: 
@@ -50,7 +60,30 @@ publish-test:
   only:
     - testPackageNew
   tags:
+    - echo "{\"AppSid\":\"$WordsAppSid\",\"AppKey\":\"$WordsAppKey\",\"Base
     - awcloud-linux
+  dependencies:
+    - merge-to-test
+
+test-package:
+  stage: test-package
+  script: 
+    - python -m pip install --upgrade setuptools wheel
+    - pip install urllib3
+    - pip install --index-url https://test.pypi.org/simple/ asposewordscloud
+    - python -m pip install -r requirements.txt && python -m pip install -r test-requirements.txt
+    - echo "{\"AppSid\":\"$WordsAppSid\",\"AppKey\":\"$WordsAppKey\",\"BaseUrl\":\"$WordsBaseUrl\" }" > Settings/servercreds.json
+    - nosetests --with-xunit
+  tags: 
+    - awcloud-linux
+  artifacts:
+    paths:
+      - nosetests.xml
+    reports:
+      junit:
+        - nosetests.xml
+  dependencies:
+    - publish-test
 
 
   
