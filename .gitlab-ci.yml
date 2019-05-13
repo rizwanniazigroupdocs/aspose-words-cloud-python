@@ -30,7 +30,7 @@ wait-for-publish:
   tags:
     - awcloud-linux
 
-merge-to-test:
+merge-to-testPackage:
   stage: merge-to-testPackage
   before_script:
     - $env:ORIGIN += 'https://{0}:{1}@git.auckland.dynabic.com/words-cloud/words-cloud-python.git' -f $env:GIT_CI_USER, $env:GIT_CI_PASS
