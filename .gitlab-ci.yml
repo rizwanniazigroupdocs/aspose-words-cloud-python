@@ -1,9 +1,6 @@
 stages:
   - build&test
-  - wait-for-publish
-  - merge-to-testPackage
-  - publish-test
-  - test-package
+  - publishing
 
 tests:
   stage: build&test  
@@ -24,16 +21,8 @@ tests:
   tags:
     - awcloud-linux
 
-wait-for-publish:
-  stage: wait-for-publish
-  when: manual
-  script:
-    - echo 'Starting publishing process'
-  tags:
-    - awcloud-linux
-
 merge-to-testPackage:
-  stage: merge-to-testPackage
+  stage: publishing
   before_script:
     - $env:ORIGIN += 'https://{0}:{1}@git.auckland.dynabic.com/words-cloud/words-cloud-python.git' -f $env:GIT_CI_USER, $env:GIT_CI_PASS
     - $env:SDK_VERSION += ((Get-Date).AddMonths(1)).tostring("yy.M")
@@ -51,14 +40,13 @@ merge-to-testPackage:
     - CI
   tags: 
     - awcloud
+  when:
+    - manual
 
 publish-test:
-  stage: publish-test
+  stage: publishing
   script:
     - docker run --rm -v $PWD:/opt/project -w=/opt/project python:2.7.15 bash scripts/publish.sh $PypiLogin $PypiPass
-  artifacts:
-    paths:       
-      - '.pypirc'  
   only:
     - testPackageNew
   tags:
@@ -68,7 +56,7 @@ publish-test:
     - merge-to-testPackage
 
 test-package:
-  stage: test-package
+  stage: publishing
   script: 
     - docker run --rm -v $PWD:/opt/project -w=/opt/project python:3.6 bash scripts/test-package.sh $WordsAppSid $WordsAppKey $WordsBaseUrl
   tags: 
@@ -85,6 +73,3 @@ test-package:
     - wait-for-publish
     - merge-to-testPackage
     - publish-test
-
-
-  
