@@ -48,8 +48,6 @@ publish-test:
     - testPackageNew
   tags:
     - awcloud-linux
-  dependencies:
-    - merge-to-testPackage
 
 test-package:
   stage: publishing
@@ -65,6 +63,3 @@ test-package:
         - nosetests.xml
   only:
     - testPackageNew
-  dependencies:
-    - merge-to-testPackage
-    - publish-test
