@@ -34,8 +34,6 @@ merge-to-testPackage:
     - git merge --no-ff --allow-unrelated-histories origin/CI
     - git diff --name-status
     - git push
-  dependencies:
-    - wait-for-publish
   only: 
     - CI
   tags: 
@@ -51,7 +49,6 @@ publish-test:
   tags:
     - awcloud-linux
   dependencies:
-    - wait-for-publish
     - merge-to-testPackage
 
 test-package:
@@ -69,6 +66,5 @@ test-package:
   only:
     - testPackageNew
   dependencies:
-    - wait-for-publish
     - merge-to-testPackage
     - publish-test
