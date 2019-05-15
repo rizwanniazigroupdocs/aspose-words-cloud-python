@@ -40,8 +40,7 @@ merge-to-testPackage:
     - CI
   tags: 
     - awcloud
-  when:
-    - manual
+  when: manual
 
 publish-test:
   stage: publishing
