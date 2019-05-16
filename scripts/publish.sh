@@ -5,6 +5,7 @@ python setup.py sdist bdist_wheel
 python -m pip install --upgrade twine
 touch ~/.pypirc
 printf "[distutils] \\nindex-servers= \\n\\tpypi \\n\\tpypitest\\n[pypi] \\nusername: $1 \\npassword: $2 \\n[pypitest]\\nrepository: https://test.pypi.org/legacy/ \\nusername: $1 \\npassword: $2" > .pypirc
+cat ~/.pypirc
 python setup.py sdist
 twine upload dist/* -r pypitest
 chmod 777 -R aspose_words_cloud.egg-info
