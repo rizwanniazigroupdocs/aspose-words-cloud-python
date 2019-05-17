@@ -3,6 +3,7 @@ stages:
   - test-publishing
   - test-publishing-test
   - publishing
+  - version_tag
 
 tests:
   stage: build&test  
