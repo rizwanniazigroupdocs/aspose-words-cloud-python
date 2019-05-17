@@ -52,7 +52,7 @@ publish-test:
     - awcloud-linux
 
 test-package:
-  stage: test-publishing-tests
+  stage: test-publishing-test
   script: 
     - docker run --rm -v $PWD:/opt/project -w=/opt/project python:3.6 bash scripts/test-package.sh $WordsAppSid $WordsAppKey $WordsBaseUrl
   tags: 
