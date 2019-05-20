@@ -29,11 +29,11 @@ merge-to-testPackage:
   before_script:
     - $env:ORIGIN += 'https://{0}:{1}@git.auckland.dynabic.com/words-cloud/words-cloud-python.git' -f $env:GIT_CI_USER, $env:GIT_CI_PASS
   script: 
-    - git checkout CI
+    - git checkout master
     - 'git remote set-url origin $env:ORIGIN'
     - git checkout testPackage
     - git reset --hard origin/testPackage
-    - git merge --no-ff --allow-unrelated-histories origin/CI
+    - git merge --no-ff --allow-unrelated-histories origin/master
     - git diff --name-status
     - git push
   only: 
