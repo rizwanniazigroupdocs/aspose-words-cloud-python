@@ -8,6 +8,4 @@ touch ~/.pypirc
 printf "[distutils] \\nindex-servers= \\n\\tpypi \\n\\tpypitest\\n[pypi] \\nusername: $1 \\npassword: $2 \\n[pypitest]\\nrepository: https://test.pypi.org/legacy/ \\nusername: $1 \\npassword: $2" > ~/.pypirc
 python setup.py sdist
 twine upload dist/* -r pypitest
-chmod 777 -R aspose_words_cloud.egg-info
-chmod 777 -R dist
-chmod 777 -R build
+chmod 777 -R .
