@@ -5,7 +5,7 @@
 from __future__ import absolute_import
 
 # import apis into sdk package
-from apis.words_api import WordsApi
+from asposewordscloud.apis.words_api import WordsApi
 
 # import ApiClient
 from asposewordscloud.api_client import ApiClient
