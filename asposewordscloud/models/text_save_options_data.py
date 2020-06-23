@@ -51,11 +51,11 @@ class TextSaveOptionsData(object):
         'update_last_saved_time_property': 'bool',
         'update_sdt_content': 'bool',
         'zip_output': 'bool',
+        'add_bidi_marks': 'bool',
         'encoding': 'str',
         'export_headers_footers_mode': 'str',
         'force_page_breaks': 'bool',
         'paragraph_break': 'str',
-        'add_bidi_marks': 'bool',
         'preserve_table_layout': 'bool',
         'simplify_list_labels': 'bool'
     }
@@ -71,16 +71,16 @@ class TextSaveOptionsData(object):
         'update_last_saved_time_property': 'UpdateLastSavedTimeProperty',
         'update_sdt_content': 'UpdateSdtContent',
         'zip_output': 'ZipOutput',
+        'add_bidi_marks': 'AddBidiMarks',
         'encoding': 'Encoding',
         'export_headers_footers_mode': 'ExportHeadersFootersMode',
         'force_page_breaks': 'ForcePageBreaks',
         'paragraph_break': 'ParagraphBreak',
-        'add_bidi_marks': 'AddBidiMarks',
         'preserve_table_layout': 'PreserveTableLayout',
         'simplify_list_labels': 'SimplifyListLabels'
     }
 
-    def __init__(self, dml3_d_effects_rendering_mode=None, dml_effects_rendering_mode=None, dml_rendering_mode=None, file_name=None, save_format=None, update_fields=None, update_last_printed_property=None, update_last_saved_time_property=None, update_sdt_content=None, zip_output=None, encoding=None, export_headers_footers_mode=None, force_page_breaks=None, paragraph_break=None, add_bidi_marks=None, preserve_table_layout=None, simplify_list_labels=None):  # noqa: E501
+    def __init__(self, dml3_d_effects_rendering_mode=None, dml_effects_rendering_mode=None, dml_rendering_mode=None, file_name=None, save_format=None, update_fields=None, update_last_printed_property=None, update_last_saved_time_property=None, update_sdt_content=None, zip_output=None, add_bidi_marks=None, encoding=None, export_headers_footers_mode=None, force_page_breaks=None, paragraph_break=None, preserve_table_layout=None, simplify_list_labels=None):  # noqa: E501
         """TextSaveOptionsData - a model defined in Swagger"""  # noqa: E501
 
         self._dml3_d_effects_rendering_mode = None
@@ -93,11 +93,11 @@ class TextSaveOptionsData(object):
         self._update_last_saved_time_property = None
         self._update_sdt_content = None
         self._zip_output = None
+        self._add_bidi_marks = None
         self._encoding = None
         self._export_headers_footers_mode = None
         self._force_page_breaks = None
         self._paragraph_break = None
-        self._add_bidi_marks = None
         self._preserve_table_layout = None
         self._simplify_list_labels = None
         self.discriminator = None
@@ -122,6 +122,8 @@ class TextSaveOptionsData(object):
             self.update_sdt_content = update_sdt_content
         if zip_output is not None:
             self.zip_output = zip_output
+        if add_bidi_marks is not None:
+            self.add_bidi_marks = add_bidi_marks
         if encoding is not None:
             self.encoding = encoding
         if export_headers_footers_mode is not None:
@@ -130,8 +132,6 @@ class TextSaveOptionsData(object):
             self.force_page_breaks = force_page_breaks
         if paragraph_break is not None:
             self.paragraph_break = paragraph_break
-        if add_bidi_marks is not None:
-            self.add_bidi_marks = add_bidi_marks
         if preserve_table_layout is not None:
             self.preserve_table_layout = preserve_table_layout
         if simplify_list_labels is not None:
@@ -366,6 +366,28 @@ class TextSaveOptionsData(object):
         self._zip_output = zip_output
 
     @property
+    def add_bidi_marks(self):
+        """Gets the add_bidi_marks of this TextSaveOptionsData.  # noqa: E501
+
+        Gets or sets specifies whether to add bi-directional marks before each BiDi run when exporting in plain text format. The default value is true.  # noqa: E501
+
+        :return: The add_bidi_marks of this TextSaveOptionsData.  # noqa: E501
+        :rtype: bool
+        """
+        return self._add_bidi_marks
+
+    @add_bidi_marks.setter
+    def add_bidi_marks(self, add_bidi_marks):
+        """Sets the add_bidi_marks of this TextSaveOptionsData.
+
+        Gets or sets specifies whether to add bi-directional marks before each BiDi run when exporting in plain text format. The default value is true.  # noqa: E501
+
+        :param add_bidi_marks: The add_bidi_marks of this TextSaveOptionsData.  # noqa: E501
+        :type: bool
+        """
+        self._add_bidi_marks = add_bidi_marks
+
+    @property
     def encoding(self):
         """Gets the encoding of this TextSaveOptionsData.  # noqa: E501
 
@@ -460,28 +482,6 @@ class TextSaveOptionsData(object):
         :type: str
         """
         self._paragraph_break = paragraph_break
-
-    @property
-    def add_bidi_marks(self):
-        """Gets the add_bidi_marks of this TextSaveOptionsData.  # noqa: E501
-
-        Gets or sets specifies whether to add bi-directional marks before each BiDi run when exporting in plain text format. The default value is true.  # noqa: E501
-
-        :return: The add_bidi_marks of this TextSaveOptionsData.  # noqa: E501
-        :rtype: bool
-        """
-        return self._add_bidi_marks
-
-    @add_bidi_marks.setter
-    def add_bidi_marks(self, add_bidi_marks):
-        """Sets the add_bidi_marks of this TextSaveOptionsData.
-
-        Gets or sets specifies whether to add bi-directional marks before each BiDi run when exporting in plain text format. The default value is true.  # noqa: E501
-
-        :param add_bidi_marks: The add_bidi_marks of this TextSaveOptionsData.  # noqa: E501
-        :type: bool
-        """
-        self._add_bidi_marks = add_bidi_marks
 
     @property
     def preserve_table_layout(self):
