@@ -103,6 +103,16 @@ The complete source code is available at [GitHub Repository](https://github.com/
 ```python
         # Start README example
 
+        self.words_api = asposewordscloud.WordsApi(api_sid, api_key)
+        self.words_api.api_client.configuration.host = base_url
+
+        upload_request = asposewordscloud.models.requests.UploadFileRequest(
+            open(os.path.join(local_folder, filename), 'rb'), os.path.join(remote_folder, remote_name))
+        self.words_api.upload_file(upload_request)
+
+        request = asposewordscloud.models.requests.DeleteWatermarkRequest(remote_name, remote_folder)
+        self.words_api.delete_watermark(request)
+
         # End README example
 ```
 
