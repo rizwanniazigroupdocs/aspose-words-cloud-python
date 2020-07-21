@@ -1,6 +1,6 @@
 # coding: utf-8
 # -----------------------------------------------------------------------------------
-# <copyright company="Aspose" file="get_document_field_names_online_request.py">
+# <copyright company="Aspose" file="append_document_online_request.py">
 #   Copyright (c) 2020 Aspose.Words for Cloud
 # </copyright>
 # <summary>
@@ -24,14 +24,14 @@
 # </summary>
 # -----------------------------------------------------------------------------------
 
-class GetDocumentFieldNamesOnlineRequest(object):
+class AppendDocumentOnlineRequest(object):
     """
-    Request model for get_document_field_names_online operation.
+    Request model for append_document_online operation.
     Initializes a new instance.
     :param document The document.
-    :param use_non_merge_fields If true, result includes "mustache" field names.
+    :param document_list <see cref="DocumentEntryList"/> with a list of documents to append.
     """
 
-    def __init__(self, document, use_non_merge_fields=None):
+    def __init__(self, document, document_list):
         self.document = document
-        self.use_non_merge_fields = use_non_merge_fields
+        self.document_list = document_list

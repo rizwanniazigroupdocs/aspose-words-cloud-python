@@ -1,6 +1,6 @@
 # coding: utf-8
 # -----------------------------------------------------------------------------------
-# <copyright company="Aspose" file="get_document_field_names_online_request.py">
+# <copyright company="Aspose" file="get_paragraphs_online_request.py">
 #   Copyright (c) 2020 Aspose.Words for Cloud
 # </copyright>
 # <summary>
@@ -24,14 +24,18 @@
 # </summary>
 # -----------------------------------------------------------------------------------
 
-class GetDocumentFieldNamesOnlineRequest(object):
+class GetParagraphsOnlineRequest(object):
     """
-    Request model for get_document_field_names_online operation.
+    Request model for get_paragraphs_online operation.
     Initializes a new instance.
+    :param node_path Path to the node which contains paragraphs.
     :param document The document.
-    :param use_non_merge_fields If true, result includes "mustache" field names.
+    :param load_encoding Encoding that will be used to load an HTML (or TXT) document if the encoding is not specified in HTML.
+    :param password Password for opening an encrypted document.
     """
 
-    def __init__(self, document, use_non_merge_fields=None):
+    def __init__(self, node_path, document, load_encoding=None, password=None):
+        self.node_path = node_path
         self.document = document
-        self.use_non_merge_fields = use_non_merge_fields
+        self.load_encoding = load_encoding
+        self.password = password

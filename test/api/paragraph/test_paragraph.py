@@ -48,6 +48,17 @@ class TestParagraph(BaseTestContext):
         self.assertIsNotNone(result, 'Error has occurred.')
 
     #
+    # Test for getting paragraph online.
+    #
+    def test_get_document_paragraph_online(self):
+        localFile = 'Common/test_multi_pages.docx'
+
+        request = asposewordscloud.models.requests.GetParagraphOnlineRequest(document=open(os.path.join(self.local_test_folder, localFile), 'rb'), node_path='sections/0', index=0)
+
+        result = self.words_api.get_paragraph_online(request)
+        self.assertIsNotNone(result, 'Error has occurred.')
+
+    #
     # Test for getting paragraph without node path.
     #
     def test_get_document_paragraph_by_index_without_node_path(self):
@@ -75,6 +86,17 @@ class TestParagraph(BaseTestContext):
         request = asposewordscloud.models.requests.GetParagraphsRequest(name=remoteFileName, node_path='sections/0', folder=remoteDataFolder)
 
         result = self.words_api.get_paragraphs(request)
+        self.assertIsNotNone(result, 'Error has occurred.')
+
+    #
+    # Test for getting all paragraphs online.
+    #
+    def test_get_document_paragraphs_online(self):
+        localFile = 'Common/test_multi_pages.docx'
+
+        request = asposewordscloud.models.requests.GetParagraphsOnlineRequest(document=open(os.path.join(self.local_test_folder, localFile), 'rb'), node_path='sections/0')
+
+        result = self.words_api.get_paragraphs_online(request)
         self.assertIsNotNone(result, 'Error has occurred.')
 
     #
@@ -167,6 +189,18 @@ class TestParagraph(BaseTestContext):
         request = asposewordscloud.models.requests.InsertParagraphRequest(name=remoteFileName, paragraph=requestParagraph, node_path='sections/0', folder=remoteDataFolder)
 
         result = self.words_api.insert_paragraph(request)
+        self.assertIsNotNone(result, 'Error has occurred.')
+
+    #
+    # Test for adding paragraph online.
+    #
+    def test_insert_paragraph_online(self):
+        localFile = 'Common/test_multi_pages.docx'
+
+        requestParagraph = asposewordscloud.ParagraphInsert(text='This is a new paragraph for your document')
+        request = asposewordscloud.models.requests.InsertParagraphOnlineRequest(document=open(os.path.join(self.local_test_folder, localFile), 'rb'), paragraph=requestParagraph, node_path='sections/0')
+
+        result = self.words_api.insert_paragraph_online(request)
         self.assertIsNotNone(result, 'Error has occurred.')
 
     #
@@ -275,6 +309,17 @@ class TestParagraph(BaseTestContext):
 
         self.words_api.delete_paragraph(request)
 
+
+    #
+    # Test for deleting  a paragraph online.
+    #
+    def test_delete_paragraph_online(self):
+        localFile = 'Common/test_multi_pages.docx'
+
+        request = asposewordscloud.models.requests.DeleteParagraphOnlineRequest(document=open(os.path.join(self.local_test_folder, localFile), 'rb'), node_path='', index=0)
+
+        result = self.words_api.delete_paragraph_online(request)
+        self.assertIsNotNone(result, 'Error has occurred.')
 
     #
     # Test for deleting  a paragraph without node path.

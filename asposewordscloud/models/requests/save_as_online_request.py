@@ -1,6 +1,6 @@
 # coding: utf-8
 # -----------------------------------------------------------------------------------
-# <copyright company="Aspose" file="get_document_field_names_online_request.py">
+# <copyright company="Aspose" file="save_as_online_request.py">
 #   Copyright (c) 2020 Aspose.Words for Cloud
 # </copyright>
 # <summary>
@@ -24,14 +24,16 @@
 # </summary>
 # -----------------------------------------------------------------------------------
 
-class GetDocumentFieldNamesOnlineRequest(object):
+class SaveAsOnlineRequest(object):
     """
-    Request model for get_document_field_names_online operation.
+    Request model for save_as_online operation.
     Initializes a new instance.
     :param document The document.
-    :param use_non_merge_fields If true, result includes "mustache" field names.
+    :param save_options_data Save options.
+    :param fonts_location Folder in filestorage with custom fonts.
     """
 
-    def __init__(self, document, use_non_merge_fields=None):
+    def __init__(self, document, save_options_data, fonts_location=None):
         self.document = document
-        self.use_non_merge_fields = use_non_merge_fields
+        self.save_options_data = save_options_data
+        self.fonts_location = fonts_location

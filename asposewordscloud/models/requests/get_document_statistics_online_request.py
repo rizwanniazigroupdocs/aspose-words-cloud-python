@@ -1,6 +1,6 @@
 # coding: utf-8
 # -----------------------------------------------------------------------------------
-# <copyright company="Aspose" file="get_document_field_names_online_request.py">
+# <copyright company="Aspose" file="get_document_statistics_online_request.py">
 #   Copyright (c) 2020 Aspose.Words for Cloud
 # </copyright>
 # <summary>
@@ -24,14 +24,18 @@
 # </summary>
 # -----------------------------------------------------------------------------------
 
-class GetDocumentFieldNamesOnlineRequest(object):
+class GetDocumentStatisticsOnlineRequest(object):
     """
-    Request model for get_document_field_names_online operation.
+    Request model for get_document_statistics_online operation.
     Initializes a new instance.
     :param document The document.
-    :param use_non_merge_fields If true, result includes "mustache" field names.
+    :param include_comments Support including/excluding comments from the WordCount. Default value is "false".
+    :param include_footnotes Support including/excluding footnotes from the WordCount. Default value is "false".
+    :param include_text_in_shapes Support including/excluding shape's text from the WordCount. Default value is "false".
     """
 
-    def __init__(self, document, use_non_merge_fields=None):
+    def __init__(self, document, include_comments=None, include_footnotes=None, include_text_in_shapes=None):
         self.document = document
-        self.use_non_merge_fields = use_non_merge_fields
+        self.include_comments = include_comments
+        self.include_footnotes = include_footnotes
+        self.include_text_in_shapes = include_text_in_shapes
