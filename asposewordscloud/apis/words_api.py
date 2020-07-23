@@ -119,6 +119,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -235,6 +237,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -361,8 +365,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.styled_node_path is not None:
             path_params[self.__downcase_first_letter('StyledNodePath')] = request.styled_node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('StyledNodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -487,6 +495,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -810,6 +820,8 @@ class WordsApi(object):
         path_params = {}
         if request.document_name is not None:
             path_params[self.__downcase_first_letter('DocumentName')] = request.document_name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('DocumentName')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -926,6 +938,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -1153,6 +1167,8 @@ class WordsApi(object):
         path_params = {}
         if request.src_path is not None:
             path_params[self.__downcase_first_letter('SrcPath')] = request.src_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('SrcPath')] = ''  # noqa: E501
 
         query_params = []
         if request.dest_path is not None:
@@ -1262,6 +1278,8 @@ class WordsApi(object):
         path_params = {}
         if request.src_path is not None:
             path_params[self.__downcase_first_letter('SrcPath')] = request.src_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('SrcPath')] = ''  # noqa: E501
 
         query_params = []
         if request.dest_path is not None:
@@ -1374,6 +1392,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -1584,6 +1604,8 @@ class WordsApi(object):
         path_params = {}
         if request.path is not None:
             path_params[self.__downcase_first_letter('Path')] = request.path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Path')] = ''  # noqa: E501
 
         query_params = []
         if request.storage_name is not None:
@@ -1696,8 +1718,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.property_name is not None:
             path_params[self.__downcase_first_letter('PropertyName')] = request.property_name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('PropertyName')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -1819,10 +1845,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -1940,10 +1972,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.border_type is not None:
             path_params[self.__downcase_first_letter('BorderType')] = request.border_type  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('BorderType')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -2061,8 +2099,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -2183,8 +2225,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.comment_index is not None:
             path_params[self.__downcase_first_letter('CommentIndex')] = request.comment_index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('CommentIndex')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -2305,8 +2351,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.property_name is not None:
             path_params[self.__downcase_first_letter('PropertyName')] = request.property_name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('PropertyName')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -2428,10 +2478,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -2553,10 +2609,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -2674,8 +2736,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -2787,6 +2853,8 @@ class WordsApi(object):
         path_params = {}
         if request.path is not None:
             path_params[self.__downcase_first_letter('Path')] = request.path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Path')] = ''  # noqa: E501
 
         query_params = []
         if request.storage_name is not None:
@@ -2888,6 +2956,8 @@ class WordsApi(object):
         path_params = {}
         if request.path is not None:
             path_params[self.__downcase_first_letter('Path')] = request.path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Path')] = ''  # noqa: E501
 
         query_params = []
         if request.storage_name is not None:
@@ -2999,10 +3069,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -3124,10 +3200,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -3252,10 +3334,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.section_path is not None:
             path_params[self.__downcase_first_letter('SectionPath')] = request.section_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('SectionPath')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -3377,8 +3465,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.section_path is not None:
             path_params[self.__downcase_first_letter('SectionPath')] = request.section_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('SectionPath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -3497,6 +3589,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -3618,10 +3712,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -3743,10 +3843,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -3868,10 +3974,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -3995,10 +4107,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.position is not None:
@@ -4121,10 +4239,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.paragraph_path is not None:
             path_params[self.__downcase_first_letter('ParagraphPath')] = request.paragraph_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('ParagraphPath')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -4245,8 +4369,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.section_index is not None:
             path_params[self.__downcase_first_letter('SectionIndex')] = request.section_index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('SectionIndex')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -4368,10 +4496,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -4496,10 +4630,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.table_row_path is not None:
             path_params[self.__downcase_first_letter('TableRowPath')] = request.table_row_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('TableRowPath')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -4624,10 +4764,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.table_path is not None:
             path_params[self.__downcase_first_letter('TablePath')] = request.table_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('TablePath')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -4744,6 +4890,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -4855,6 +5003,8 @@ class WordsApi(object):
         path_params = {}
         if request.path is not None:
             path_params[self.__downcase_first_letter('Path')] = request.path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Path')] = ''  # noqa: E501
 
         query_params = []
         if request.storage_name is not None:
@@ -4964,6 +5114,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -5289,8 +5441,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.bookmark_name is not None:
             path_params[self.__downcase_first_letter('BookmarkName')] = request.bookmark_name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('BookmarkName')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -5398,6 +5554,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -5510,10 +5668,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.border_type is not None:
             path_params[self.__downcase_first_letter('BorderType')] = request.border_type  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('BorderType')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -5622,8 +5786,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -5735,8 +5903,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.comment_index is not None:
             path_params[self.__downcase_first_letter('CommentIndex')] = request.comment_index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('CommentIndex')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -5844,6 +6016,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -5951,6 +6125,8 @@ class WordsApi(object):
         path_params = {}
         if request.document_name is not None:
             path_params[self.__downcase_first_letter('DocumentName')] = request.document_name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('DocumentName')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -6063,10 +6239,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -6179,10 +6361,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -6295,10 +6483,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -6407,8 +6601,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -6517,6 +6715,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -6728,8 +6928,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.hyperlink_index is not None:
             path_params[self.__downcase_first_letter('HyperlinkIndex')] = request.hyperlink_index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('HyperlinkIndex')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -6837,6 +7041,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -6944,6 +7150,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -7055,8 +7263,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.property_name is not None:
             path_params[self.__downcase_first_letter('PropertyName')] = request.property_name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('PropertyName')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -7164,6 +7376,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -7274,6 +7488,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -7393,6 +7609,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.format is not None:
@@ -7511,10 +7729,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -7623,8 +7847,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -7729,6 +7957,8 @@ class WordsApi(object):
         path_params = {}
         if request.path is not None:
             path_params[self.__downcase_first_letter('Path')] = request.path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Path')] = ''  # noqa: E501
 
         query_params = []
         if request.storage_name is not None:
@@ -7835,10 +8065,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -7947,8 +8183,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -8061,10 +8301,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -8173,8 +8419,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -8287,8 +8537,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.header_footer_index is not None:
             path_params[self.__downcase_first_letter('HeaderFooterIndex')] = request.header_footer_index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('HeaderFooterIndex')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -8407,10 +8661,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.header_footer_index is not None:
             path_params[self.__downcase_first_letter('HeaderFooterIndex')] = request.header_footer_index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('HeaderFooterIndex')] = ''  # noqa: E501
         if request.section_index is not None:
             path_params[self.__downcase_first_letter('SectionIndex')] = request.section_index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('SectionIndex')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -8525,8 +8785,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.section_path is not None:
             path_params[self.__downcase_first_letter('SectionPath')] = request.section_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('SectionPath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -8640,8 +8904,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.list_id is not None:
             path_params[self.__downcase_first_letter('ListId')] = request.list_id  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('ListId')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -8749,6 +9017,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -8861,10 +9131,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -8973,8 +9249,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -9087,10 +9367,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -9203,10 +9489,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -9319,10 +9611,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -9431,8 +9729,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -9545,10 +9847,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -9661,10 +9969,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.range_start_identifier is not None:
             path_params[self.__downcase_first_letter('RangeStartIdentifier')] = request.range_start_identifier  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('RangeStartIdentifier')] = ''  # noqa: E501
         if request.range_end_identifier is not None:
             path_params[self.__downcase_first_letter('RangeEndIdentifier')] = request.range_end_identifier  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('RangeEndIdentifier')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -9780,10 +10094,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.paragraph_path is not None:
             path_params[self.__downcase_first_letter('ParagraphPath')] = request.paragraph_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('ParagraphPath')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -9899,10 +10219,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.paragraph_path is not None:
             path_params[self.__downcase_first_letter('ParagraphPath')] = request.paragraph_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('ParagraphPath')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -10014,8 +10340,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.paragraph_path is not None:
             path_params[self.__downcase_first_letter('ParagraphPath')] = request.paragraph_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('ParagraphPath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -10127,8 +10457,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.section_index is not None:
             path_params[self.__downcase_first_letter('SectionIndex')] = request.section_index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('SectionIndex')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -10240,8 +10574,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.section_index is not None:
             path_params[self.__downcase_first_letter('SectionIndex')] = request.section_index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('SectionIndex')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -10349,6 +10687,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -10460,8 +10800,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.style_name is not None:
             path_params[self.__downcase_first_letter('StyleName')] = request.style_name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('StyleName')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -10573,8 +10917,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.styled_node_path is not None:
             path_params[self.__downcase_first_letter('StyledNodePath')] = request.styled_node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('StyledNodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -10682,6 +11030,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -10794,10 +11144,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -10913,10 +11269,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.table_row_path is not None:
             path_params[self.__downcase_first_letter('TableRowPath')] = request.table_row_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('TableRowPath')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -11032,10 +11394,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.table_row_path is not None:
             path_params[self.__downcase_first_letter('TableRowPath')] = request.table_row_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('TableRowPath')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -11148,10 +11516,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -11267,10 +11641,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.table_path is not None:
             path_params[self.__downcase_first_letter('TablePath')] = request.table_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('TablePath')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -11386,10 +11766,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.table_path is not None:
             path_params[self.__downcase_first_letter('TablePath')] = request.table_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('TablePath')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -11498,8 +11884,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -11614,6 +12004,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -11741,8 +12133,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -11869,8 +12265,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -11996,8 +12396,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -12122,8 +12526,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -12252,8 +12660,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.section_path is not None:
             path_params[self.__downcase_first_letter('SectionPath')] = request.section_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('SectionPath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -12376,6 +12788,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -12501,10 +12915,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -12623,6 +13043,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -12747,8 +13169,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -12878,8 +13304,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.paragraph_path is not None:
             path_params[self.__downcase_first_letter('ParagraphPath')] = request.paragraph_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('ParagraphPath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -13004,6 +13434,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -13127,8 +13559,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -13255,8 +13691,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.table_row_path is not None:
             path_params[self.__downcase_first_letter('TableRowPath')] = request.table_row_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('TableRowPath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -13383,8 +13823,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.table_path is not None:
             path_params[self.__downcase_first_letter('TablePath')] = request.table_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('TablePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -13506,6 +13950,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -13632,6 +14078,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -13848,6 +14296,8 @@ class WordsApi(object):
         path_params = {}
         if request.src_path is not None:
             path_params[self.__downcase_first_letter('SrcPath')] = request.src_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('SrcPath')] = ''  # noqa: E501
 
         query_params = []
         if request.dest_path is not None:
@@ -13957,6 +14407,8 @@ class WordsApi(object):
         path_params = {}
         if request.src_path is not None:
             path_params[self.__downcase_first_letter('SrcPath')] = request.src_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('SrcPath')] = ''  # noqa: E501
 
         query_params = []
         if request.dest_path is not None:
@@ -14069,6 +14521,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -14189,6 +14643,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -14301,6 +14757,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -14416,10 +14874,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.range_start_identifier is not None:
             path_params[self.__downcase_first_letter('RangeStartIdentifier')] = request.range_start_identifier  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('RangeStartIdentifier')] = ''  # noqa: E501
         if request.range_end_identifier is not None:
             path_params[self.__downcase_first_letter('RangeEndIdentifier')] = request.range_end_identifier  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('RangeEndIdentifier')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -14539,10 +15003,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.format is not None:
@@ -14664,10 +15134,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.format is not None:
@@ -14788,8 +15264,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.page_index is not None:
             path_params[self.__downcase_first_letter('PageIndex')] = request.page_index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('PageIndex')] = ''  # noqa: E501
 
         query_params = []
         if request.format is not None:
@@ -14911,10 +15391,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.format is not None:
@@ -15036,10 +15522,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.format is not None:
@@ -15158,6 +15650,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -15283,10 +15777,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.range_start_identifier is not None:
             path_params[self.__downcase_first_letter('RangeStartIdentifier')] = request.range_start_identifier  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('RangeStartIdentifier')] = ''  # noqa: E501
         if request.range_end_identifier is not None:
             path_params[self.__downcase_first_letter('RangeEndIdentifier')] = request.range_end_identifier  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('RangeEndIdentifier')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -15492,6 +15992,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -15612,10 +16114,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.range_start_identifier is not None:
             path_params[self.__downcase_first_letter('RangeStartIdentifier')] = request.range_start_identifier  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('RangeStartIdentifier')] = ''  # noqa: E501
         if request.range_end_identifier is not None:
             path_params[self.__downcase_first_letter('RangeEndIdentifier')] = request.range_end_identifier  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('RangeEndIdentifier')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -15747,6 +16255,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -15896,6 +16406,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.pattern is not None:
@@ -16014,6 +16526,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.format is not None:
@@ -16138,6 +16652,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -16260,8 +16776,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.bookmark_name is not None:
             path_params[self.__downcase_first_letter('BookmarkName')] = request.bookmark_name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('BookmarkName')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -16389,10 +16909,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.border_type is not None:
             path_params[self.__downcase_first_letter('BorderType')] = request.border_type  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('BorderType')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -16519,8 +17045,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.comment_index is not None:
             path_params[self.__downcase_first_letter('CommentIndex')] = request.comment_index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('CommentIndex')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -16652,10 +17182,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -16785,10 +17321,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -16905,6 +17447,8 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -17026,10 +17570,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -17157,10 +17707,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -17287,8 +17843,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.list_id is not None:
             path_params[self.__downcase_first_letter('ListId')] = request.list_id  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('ListId')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -17419,10 +17979,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.list_id is not None:
             path_params[self.__downcase_first_letter('ListId')] = request.list_id  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('ListId')] = ''  # noqa: E501
         if request.list_level is not None:
             path_params[self.__downcase_first_letter('ListLevel')] = request.list_level  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('ListLevel')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -17550,10 +18116,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -17681,10 +18253,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -17815,10 +18393,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.paragraph_path is not None:
             path_params[self.__downcase_first_letter('ParagraphPath')] = request.paragraph_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('ParagraphPath')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -17949,10 +18533,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.paragraph_path is not None:
             path_params[self.__downcase_first_letter('ParagraphPath')] = request.paragraph_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('ParagraphPath')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -18079,8 +18669,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.section_index is not None:
             path_params[self.__downcase_first_letter('SectionIndex')] = request.section_index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('SectionIndex')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -18207,8 +18801,12 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.style_name is not None:
             path_params[self.__downcase_first_letter('StyleName')] = request.style_name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('StyleName')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -18339,10 +18937,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.table_row_path is not None:
             path_params[self.__downcase_first_letter('TableRowPath')] = request.table_row_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('TableRowPath')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -18470,10 +19074,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
         if request.node_path is not None:
             path_params[self.__downcase_first_letter('NodePath')] = request.node_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('NodePath')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -18604,10 +19214,16 @@ class WordsApi(object):
         path_params = {}
         if request.name is not None:
             path_params[self.__downcase_first_letter('Name')] = request.name  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Name')] = ''  # noqa: E501
         if request.table_path is not None:
             path_params[self.__downcase_first_letter('TablePath')] = request.table_path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('TablePath')] = ''  # noqa: E501
         if request.index is not None:
             path_params[self.__downcase_first_letter('Index')] = request.index  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Index')] = ''  # noqa: E501
 
         query_params = []
         if request.folder is not None:
@@ -18724,6 +19340,8 @@ class WordsApi(object):
         path_params = {}
         if request.path is not None:
             path_params[self.__downcase_first_letter('Path')] = request.path  # noqa: E501
+        else:
+            path_params[self.__downcase_first_letter('Path')] = ''  # noqa: E501
 
         query_params = []
         if request.storage_name is not None:
