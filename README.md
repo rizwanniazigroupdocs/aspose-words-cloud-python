@@ -69,53 +69,6 @@ Check out the [Developer's Guide](https://docs.aspose.cloud/display/wordscloud/D
 - Added endpoint to update paragraph format without node path (PUT '/words/{name}/paragraphs/{index}/format')
 
 
-## Enhancements in Version 20.6
-
-- Added new methods:
-  - DeleteAllParagraphTabStopsWithoutNodePath
-  - DeleteParagraphTabStopWithoutNodePath
-  - GetParagraphTabStopsWithoutNodePath
-  - InsertOrUpdateParagraphTabStopWithoutNodePath
-  - InsertParagraphWithoutNodePath
-  - UpdateParagraphFormatWithoutNodePath
-  - UpdateParagraphListFormatWithoutNodePath
-  - DeleteParagraphListFormatWithoutNodePath
-- DrawingObject related methods have been changed body content. Special request classes are introduced instead of strings.
-- InsertOrUpdateParagraphTabStop, DeleteParagraphTabStop methods have been changed parameter order
-- OoxmlSaveOptionsData.CompressionLevel property has been added
-
-
-## Enhancements in Version 20.5
-
-- Added methods to work with Word document lists
-  - GetLists
-  - GetList
-  - InsertList
-  - UpdateList
-  - UpdateListLevel
-- Added methods to work with styles
-  - GetStyles
-  - UpdateStyle
-  - InsertStyle
-  - CopyStyle
-  - GetStyleFromDocumentElement
-  - ApplyStyleToDocumentElement
-- Added methods to work with paragraph list format
-  - GetParagraphListFormat
-  - GetParagraphListFormatWithoutNodePath
-  - UpdateParagraphListFormat
-  - DeleteParagraphListFormat
-- Added methods to work with paragraph tab stops
-  - GetParagraphTabStops
-  - InsertOrUpdateParagraphTabStop
-  - DeleteAllParagraphTabStops
-  - DeleteParagraphTabStop
-- Added methods to build reports
-  - BuildReport
-  - BuildReportOnline
-- Added Shading property to ParagraphFormat
-
-
 ## Read & Write Document Formats
 
 **Microsoft Word:** DOC, DOCX, RTF, DOT, DOTX, DOTM, FlatOPC (XML)
