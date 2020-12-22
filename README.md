@@ -1,5 +1,6 @@
 
-![](https://img.shields.io/badge/api-v4.0-lightgrey) ![PyPI](https://img.shields.io/pypi/v/aspose-words-cloud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/aspose-words-cloud) ![PyPI - Implementation](https://img.shields.io/pypi/implementation/aspose-words-cloud) ![PyPI - Wheel](https://img.shields.io/pypi/wheel/aspose-words-cloud) [![GitHub license](https://img.shields.io/github/license/aspose-words-cloud/aspose-words-cloud)](https://github.com/aspose-words-cloud/aspose-words-cloud-python/blob/master/LICENSE) 
+![](https://img.shields.io/badge/api-v4.0-lightgrey) ![PyPI](https://img.shields.io/pypi/v/aspose-words-cloud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/aspose-words-cloud) ![PyPI - Implementation](https://img.shields.io/pypi/implementation/aspose-words-cloud) ![PyPI - Wheel](https://img.shields.io/pypi/wheel/aspose-words-cloud) [![GitHub license](https://img.shields.io/github/license/aspose-words-cloud/aspose-words-cloud-python)](https://github.com/aspose-words-cloud/aspose-words-cloud-python/blob/master/LICENSE)
+
 Python Cloud SDK wraps Aspose.Words Cloud API so you could seamlessly integrate Microsoft Word® file generation, manipulation, conversion & inspection features into your own python applications.
 
 # Node.js SDK for Word Documents Processing in the Cloud
